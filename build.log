@@ -1,0 +1,912 @@
+Build started 10/11/2026 2:39:36 PM.
+Logging verbosity is set to: Normal.
+     1>Project "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler.sln" on node 1 (default targets).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Release|x64".
+     1>Project "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler.sln" (1) is building "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj" (2) on node 1 (default targets).
+     2>PrepareForBuild:
+         Creating directory "x64\Release\".
+         Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+         Creating directory "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\x64\Release\".
+         Creating directory "x64\Release\OptiScaler.tlog\".
+       InitializeBuildStatus:
+         Creating "x64\Release\OptiScaler.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "x64\Release\OptiScaler.tlog\unsuccessfulbuild".
+       PreBuildEvent:
+         powershell -NoProfile -Command "Start-Sleep -Milliseconds 1500; $date = Get-Date -Format 'yyyyMMdd_HHmmss'; $commit = (git rev-parse --short HEAD 2>$null); if (-not $commit) { $commit = 'unknown' }; Set-Content -Path 'D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\resource_build_date.h' -Value ('#define VER_BUILD_DATE \"' + $date + '\"') -Force; Set-Content -Path 'D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\resource_build_commit.h' -Value ('#define VER_BUILD_COMMIT \"' + $commit + '\"') -Force;"
+         :VCEnd
+       ComputeStdModulesCompileInputs:
+         Reading library manifest file 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\modules\modules.json' which provides data for library 'microsoft/STL'.
+         Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+         Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+       MakeDirsForCl:
+         Creating directory "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\x64\Release\microsoft\STL".
+       SetModuleDependencies:
+         Creating directory "x64\Release\OptiScaler_MD.tlog\".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /MP /O2 /Ot /GL /D NDEBUG /D _DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /D _WINDOWS /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++latest /permissive- /Yc"pch.h" /Fp"x64\Release\OptiScaler.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:queue /w34996 pch.cpp
+         pch.cpp
+         C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /MP /O2 /Ot /GL /D NDEBUG /D _DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /D _WINDOWS /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++latest /permissive- /Yu"pch.h" /Fp"x64\Release\OptiScaler.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:queue /w34996 dlssnr\DlssNr_CompatibilityRuntime.cpp dlssnr\DlssNr_CompatibilityRuntimePaths.cpp dlssnr\DlssNr_CompatibilityRuntimeVk.cpp dlssnr\DlssNr_NgxDiagnostics.cpp framegen\nvngx\Nvngx_Combo.cpp fsr4\FSR4Upgrade.cpp gpu_time\GpuTime_Dx11.cpp gpu_time\GpuTime_Dx12.cpp hooks\Amdxc64_Hooks.cpp framegen\dlssg\DLSSG_Dx12.cpp framegen\ffx\FSRFG_Dx12.cpp framegen\IFGFeature.cpp framegen\IFGFeature_Dx12.cpp framegen\nvngx\Nvngx_FG.cpp fsr4\FSR4ModelSelection.cpp hooks\D3D12_Hooks.cpp hooks\DxgiFactory_Hooks.cpp hooks\DxgiFactory_WrappedCalls.cpp hooks\Dxgi_Hooks.cpp hooks\FG_Hooks.cpp hooks\Kernel_Hooks.cpp hooks\LibraryLoad_Hooks.cpp hooks\VulkanwDx12_Hooks.cpp hooks\Xell_Hooks.cpp inputs\FG\Streamline_Inputs_Sl1_Dx12.cpp include\device_info\device_info.cpp inputs\FG\Upscaler_Inputs_Dx11wDx12.cpp low_latency\input\input_common.cpp low_latency\input\input_reflex.cpp low_latency\input\input_xell.cpp low_latency\input\input_antilag2.cpp shaders\magnifier\Magnifier_Dx11.cpp menu\input\input_system.cpp menu\input\input_system_cursor.cpp menu\input\input_system_detours.cpp menu\input\input_system_directinput.cpp menu\input\input_system_gameinput.cpp menu\input\input_system_hid.cpp menu\input\input_system_messages.cpp menu\input\input_system_raw.cpp menu\input\input_system_window.cpp menu\input\input_system_windows_hooks.cpp menu\input\input_system_xinput.cpp misc\IdentifyGpu.cpp inputs\FSR2_Dx11.cpp inputs\FSR2_Vk.cpp inputs\XeSS_Dx11.cpp low_latency\ll_util.cpp nvapi\fakenvapi\log.cpp nvapi\fakenvapi\low_latency.cpp nvapi\fakenvapi\low_latency_d3d.cpp low_latency\low_latency_tech\ll_antilag2.cpp low_latency\low_latency_tech\ll_antilag_vk.cpp low_latency\low_latency_tech\ll_latencyflex.cpp low_latency\low_latency_tech\ll_xell.cpp nvapi\fakenvapi\low_latency_vk.cpp nvapi\fakenvapi\nvapi_calls.cpp framegen\nvngx\Nvngx_FFX.cpp framegen\nvngx\Nvngx_Nukems.cpp framegen\nvngx\Nvngx_Arturs.cpp NVNGX_Parameter.cpp framegen\nvngx\Nvngx_DllProxy.cpp OptiTypes.cpp shaders\depth_invert\DI_Dx12.cpp shaders\hudless_compare_compute\HCC_Dx12.cpp shaders\hud_copy\HudCopy_Dx12.cpp shaders\depth_transfer\DT_Vk.cpp shaders\magnifier\Magnifier_Common.cpp shaders\magnifier\Magnifier_Dx12.cpp shaders\magnifier\Magnifier_Vk.cpp shaders\output_scaling\OS_Vk.cpp shaders\rcas\RCAS_Common.cpp shaders\rcas\RCAS_Vk.cpp shaders\Shader_Common.cpp shaders\render_ui\RUI_Dx12.cpp shaders\resource_copy\RC_Vk.cpp shaders\Shader_Dx12.cpp shaders\Shader_Vk.cpp misc\SkipSpoof.cpp shaders\Shader_Dx11.cpp spoofing\Dxgi_Spoofing.cpp spoofing\User32_Spoofing.cpp spoofing\Vulkan_Spoofing.cpp low_latency\input\input_uell.cpp upscalers\fsr2_212\FSR2Feature_VkOnDx12_212.cpp upscalers\ffx\FFXFeature_VkOn12.cpp upscalers\fsr31\FSR31Feature.cpp upscalers\IFeature_Vk.cpp upscalers\IFeature_VkwDx12.cpp upscaler_time\UpscalerTime_Vk.cpp with_dx12\dx11_with_dx12.cpp with_dx12\with_dx12.cpp with_dx12\dx11_with_dx12_sc.cpp wrapped\wrapped_factory.cpp inputs\FG\FSR3_Dx12_FG.cpp inputs\FG\Streamline_Inputs_Dx12.cpp framegen\xefg\XeFG_Dx12.cpp hooks\Streamline_Hooks.cpp hudfix\Hudfix_Dx12.cpp inputs\FfxApiExe_Dx12.cpp inputs\FG\FfxApi_Dx12_FG.cpp inputs\FfxApi_Vk.cpp inputs\FG\Upscaler_Inputs_Dx12.cpp inputs\XeSS_Base.cpp inputs\XeSS_Common.cpp inputs\XeSS_Dbg.cpp inputs\XeSS_Vulkan.cpp misc\FrameLimit.cpp nvapi\fakenvapi.cpp nvapi\NvApiHooks.cpp nvapi\NvApiTypes.cpp hooks\Reflex_Hooks.cpp resource_tracking\ResTrack_dx12.cpp shaders\hudless_compare\HC_Dx12.cpp shaders\resource_flip\RF_Dx12.cpp shaders\depth_scale\DS_Dx12.cpp shaders\depth_transfer\DT_Dx11.cpp upscalers\dlssd\DLSSDFeature.cpp upscalers\dlssd\DLSSDFeature_Dx11.cpp upscalers\dlssd\DLSSDFeature_Dx12.cpp upscalers\dlssd\DLSSDFeature_Vk.cpp upscalers\dlss\DLSSFeature.cpp upscalers\dlss\DLSSFeature_Dx11.cpp upscalers\dlss\DLSSFeature_Dx11On12.cpp upscalers\dlss\DLSSFeature_VkOn12.cpp upscalers\dlss\DLSSFeature_Dx12.cpp upscalers\dlss\DLSSFeature_Vk.cpp upscalers\FeatureProvider_Dx11.cpp upscalers\FeatureProvider_Dx12.cpp upscalers\FeatureProvider_Vk.cpp upscalers\fsr2_212\FSR2Feature_212.cpp upscalers\fsr2_212\FSR2Feature_Dx11On12_212.cpp upscalers\fsr2_212\FSR2Feature_Dx12_212.cpp upscalers\fsr2_212\FSR2Feature_Vk_212.cpp upscalers\ffx\FFXFeature.cpp upscalers\fsr31\FSR31Feature_Dx11.cpp upscalers\ffx\FFXFeature_Dx11On12.cpp upscalers\ffx\FFXFeature_Dx12.cpp upscalers\ffx\FFXFeature_Vk.cpp upscalers\IFeature_Dx11.cpp upscalers\IFeature_Dx11wDx12.cpp Config.cpp upscalers\fsr2\FSR2Feature.cpp upscalers\fsr2\FSR2Feature_Dx11.cpp upscalers\fsr2\FSR2Feature_Dx11On12.cpp upscalers\fsr2\FSR2Feature_Dx12.cpp upscalers\fsr2\FSR2Feature_Vk.cpp upscalers\IFeature.cpp upscalers\IFeature_Dx12.cpp inputs\FfxApi_Dx12.cpp inputs\FSR2_Dx12.cpp inputs\FSR3_Dx12.cpp hooks\D3D11_Hooks.cpp hooks\Vulkan_Hooks.cpp menu\menu_common.cpp menu\menu_dx_base.cpp menu\menu_dx11.cpp menu\menu_dx12.cpp menu\menu_overlay_base.cpp menu\menu_overlay_dx.cpp menu\menu_overlay_vk.cpp wrapped\wrapped_swapchain.cpp Logger.cpp inputs\NVNGX.cpp inputs\NVNGX_DLSS_Dx11.cpp shaders\dlssnr\DlssNr_Dx12.cpp shaders\dlssnr\DlssNr_Vk.cpp dlssnr\DlssNrFeature_Vk.cpp dlssnr\DlssNrFinished_Vk.cpp dlssnr\DlssNr_ExposureScan.cpp dlssnr\DlssNr_Proxy.cpp dlssnr\DlssNr_Menu.cpp inputs\NVNGX_DLSS_Dx12.cpp dllmain.cpp inputs\NVNGX_DLSS_Vk.cpp upscalers\xess\XeSSFeature.cpp upscalers\xess\XeSSFeature_Dx11.cpp upscalers\xess\XeSSFeature_Dx11on12.cpp upscalers\xess\XeSSFeature_Dx12.cpp scanner\scanner.cpp shaders\bias\Bias_Dx11.cpp shaders\bias\Bias_Dx12.cpp shaders\format_transfer\FT_Dx12.cpp shaders\output_scaling\OS_Dx11.cpp shaders\output_scaling\OS_Dx12.cpp shaders\rcas\RCAS_Dx11.cpp shaders\rcas\RCAS_Dx12.cpp upscalers\xess\XeSSFeature_Vk.cpp Util.cpp version_check.cpp inputs\XeSS_Debug.cpp inputs\XeSS_Dx12.cpp dlssnr\DlssNr_Status.cpp dlssnr\DlssNr_GpuLifetime.cpp dlssnr\DlssNr_MenuBlend.cpp dlssnr\DlssNr_MenuInput.cpp dlssnr\DlssNr_MenuModel.cpp dlssnr\DlssNr_MenuOverlay.cpp dlssnr\DlssNr_MenuPlacement.cpp dlssnr\DlssNr_Pipeline_Dx12.cpp dlssnr\DlssNrFeature_Vk_Model.cpp dlssnr\DlssNrFeature_Vk_Resources.cpp shaders\dlssnr\DlssNr_Upscaler_Dx12.cpp dlssnr\DlssNr_ExposureAnchors.cpp dlssnr\DlssNr_ExposureReadback.cpp shaders\dlssnr\DlssNr_Dx12_DeferredSr.cpp shaders\dlssnr\DlssNr_Dx12_Enlarge.cpp shaders\dlssnr\DlssNr_Dx12_Evaluate.cpp shaders\dlssnr\DlssNr_Dx12_Exposure.cpp shaders\dlssnr\DlssNr_Dx12_FinishedCompose.cpp shaders\dlssnr\DlssNr_Dx12_FinishedQueue.cpp shaders\dlssnr\DlssNr_Dx12_Hold.cpp shaders\dlssnr\DlssNr_Dx12_Late.cpp shaders\dlssnr\DlssNr_Dx12_Resources.cpp shaders\dlssnr\DlssNr_Dx12_Run.cpp shaders\dlssnr\DlssNr_Dx12_Status.cpp shaders\dlssnr\DlssNr_Dx12_Encode.cpp shaders\dlssnr\DlssNr_Dx12_Models.cpp dlssnr\DlssNr_StreamlinePicture.cpp
+         DlssNr_CompatibilityRuntime.cpp
+         DlssNr_CompatibilityRuntimePaths.cpp
+         DlssNr_CompatibilityRuntimeVk.cpp
+         DlssNr_NgxDiagnostics.cpp
+         Nvngx_Combo.cpp
+         FSR4Upgrade.cpp
+         GpuTime_Dx11.cpp
+         GpuTime_Dx12.cpp
+         Amdxc64_Hooks.cpp
+         DLSSG_Dx12.cpp
+         FSRFG_Dx12.cpp
+         IFGFeature.cpp
+         IFGFeature_Dx12.cpp
+         Nvngx_FG.cpp
+         FSR4ModelSelection.cpp
+         D3D12_Hooks.cpp
+         DxgiFactory_Hooks.cpp
+         DxgiFactory_WrappedCalls.cpp
+         Dxgi_Hooks.cpp
+         FG_Hooks.cpp
+         Kernel_Hooks.cpp
+         LibraryLoad_Hooks.cpp
+         VulkanwDx12_Hooks.cpp
+         Xell_Hooks.cpp
+         Streamline_Inputs_Sl1_Dx12.cpp
+         device_info.cpp
+         Upscaler_Inputs_Dx11wDx12.cpp
+         input_common.cpp
+         input_reflex.cpp
+         input_xell.cpp
+         input_antilag2.cpp
+         Magnifier_Dx11.cpp
+         input_system.cpp
+         input_system_cursor.cpp
+         input_system_detours.cpp
+         input_system_directinput.cpp
+         input_system_gameinput.cpp
+         input_system_hid.cpp
+         input_system_messages.cpp
+         input_system_raw.cpp
+         input_system_window.cpp
+         input_system_windows_hooks.cpp
+         input_system_xinput.cpp
+         IdentifyGpu.cpp
+         FSR2_Dx11.cpp
+         FSR2_Vk.cpp
+         XeSS_Dx11.cpp
+         ll_util.cpp
+         log.cpp
+         low_latency.cpp
+         low_latency_d3d.cpp
+         ll_antilag2.cpp
+         ll_antilag_vk.cpp
+         ll_latencyflex.cpp
+         ll_xell.cpp
+         low_latency_vk.cpp
+         nvapi_calls.cpp
+         Nvngx_FFX.cpp
+         Nvngx_Nukems.cpp
+         Nvngx_Arturs.cpp
+         NVNGX_Parameter.cpp
+         Nvngx_DllProxy.cpp
+         OptiTypes.cpp
+         DI_Dx12.cpp
+         HCC_Dx12.cpp
+         HudCopy_Dx12.cpp
+         DT_Vk.cpp
+         Magnifier_Common.cpp
+         Magnifier_Dx12.cpp
+         Magnifier_Vk.cpp
+         OS_Vk.cpp
+         RCAS_Common.cpp
+         RCAS_Vk.cpp
+         Shader_Common.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\shaders\magnifier\Magnifier_Common.cpp(40,51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/shaders/magnifier/Magnifier_Common.cpp')
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\shaders\magnifier\Magnifier_Common.cpp(41,51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/shaders/magnifier/Magnifier_Common.cpp')
+         
+         RUI_Dx12.cpp
+         RC_Vk.cpp
+         Shader_Dx12.cpp
+         Shader_Vk.cpp
+         SkipSpoof.cpp
+         Shader_Dx11.cpp
+         Dxgi_Spoofing.cpp
+         User32_Spoofing.cpp
+         Vulkan_Spoofing.cpp
+         input_uell.cpp
+         FSR2Feature_VkOnDx12_212.cpp
+         FFXFeature_VkOn12.cpp
+     2>C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\include\optional(82,17): warning C4244: 'initializing': conversion from 'int64_t' to 'unsigned int', possible loss of data [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/low_latency/input/input_uell.cpp')
+             C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\include\optional(82,17):
+             the template instantiation context (the oldest one first) is
+                 D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\low_latency\input\input_uell.cpp(44,60):
+                 see reference to function template instantiation 'std::optional<UINT>::optional<int64_t&,0>(_Ty2) noexcept' being compiled
+                 with
+                 [
+                     _Ty2=int64_t &
+                 ]
+                     D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\low_latency\input\input_uell.cpp(44,17):
+                     see the first reference to 'std::optional<UINT>::optional' in 'InputUeLowLatency::tickStart'
+                 C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\include\optional(272,18):
+                 see reference to function template instantiation 'std::_Optional_construct_base<_Ty>::_Optional_construct_base<int64_t&>(std::in_place_t,int64_t &)' being compiled
+                 with
+                 [
+                     _Ty=UINT
+                 ]
+                 D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\low_latency\input\input_uell.cpp(82,1):
+                 see reference to function template instantiation 'std::_Optional_destruct_base<_Ty,true>::_Optional_destruct_base<int64_t&>(std::in_place_t,int64_t &) noexcept' being compiled
+                 with
+                 [
+                     _Ty=UINT
+                 ]
+         
+         FSR31Feature.cpp
+         IFeature_Vk.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2_212/FSR2Feature_VkOnDx12_212.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2_212/FSR2Feature_VkOnDx12_212.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         IFeature_VkwDx12.cpp
+         UpscalerTime_Vk.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/ffx/FFXFeature_VkOn12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/ffx/FFXFeature_VkOn12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         dx11_with_dx12.cpp
+         with_dx12.cpp
+         dx11_with_dx12_sc.cpp
+         wrapped_factory.cpp
+         FSR3_Dx12_FG.cpp
+         Streamline_Inputs_Dx12.cpp
+         XeFG_Dx12.cpp
+         Streamline_Hooks.cpp
+         Hudfix_Dx12.cpp
+         FfxApiExe_Dx12.cpp
+         FfxApi_Dx12_FG.cpp
+         FfxApi_Vk.cpp
+         Upscaler_Inputs_Dx12.cpp
+         XeSS_Base.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\hooks\Streamline_Hooks.cpp(250,63): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/hooks/Streamline_Hooks.cpp')
+         
+         XeSS_Common.cpp
+         XeSS_Dbg.cpp
+         XeSS_Vulkan.cpp
+         FrameLimit.cpp
+         fakenvapi.cpp
+         NvApiHooks.cpp
+         NvApiTypes.cpp
+         Reflex_Hooks.cpp
+         ResTrack_dx12.cpp
+         HC_Dx12.cpp
+         RF_Dx12.cpp
+         DS_Dx12.cpp
+         DT_Dx11.cpp
+         DLSSDFeature.cpp
+         DLSSDFeature_Dx11.cpp
+         DLSSDFeature_Dx12.cpp
+         DLSSDFeature_Vk.cpp
+         DLSSFeature.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx11.h(6,7): warning C4250: 'DLSSDFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlssd/DLSSDFeature_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(47,27):
+             see declaration of 'IFeature_Dx11::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx11.h(6,7): warning C4250: 'DLSSDFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlssd/DLSSDFeature_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(48,10):
+             see declaration of 'IFeature_Dx11::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx12.h(7,7): warning C4250: 'DLSSDFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlssd/DLSSDFeature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx12.h(7,7): warning C4250: 'DLSSDFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlssd/DLSSDFeature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         DLSSFeature_Dx11.cpp
+         DLSSFeature_Dx11On12.cpp
+         DLSSFeature_VkOn12.cpp
+         DLSSFeature_Dx12.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx11.h(6,7): warning C4250: 'DLSSFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlss/DLSSFeature_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(47,27):
+             see declaration of 'IFeature_Dx11::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx11.h(6,7): warning C4250: 'DLSSFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlss/DLSSFeature_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(48,10):
+             see declaration of 'IFeature_Dx11::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlss/DLSSFeature_Dx11On12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlss/DLSSFeature_Dx11On12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlss/DLSSFeature_VkOn12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlss/DLSSFeature_VkOn12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         DLSSFeature_Vk.cpp
+         FeatureProvider_Dx11.cpp
+         FeatureProvider_Dx12.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlss/DLSSFeature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/dlss/DLSSFeature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         FeatureProvider_Vk.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx11.h(6,7): warning C4250: 'DLSSFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(47,27):
+             see declaration of 'IFeature_Dx11::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx11.h(6,7): warning C4250: 'DLSSFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(48,10):
+             see declaration of 'IFeature_Dx11::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx11.h(6,7): warning C4250: 'DLSSDFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(47,27):
+             see declaration of 'IFeature_Dx11::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx11.h(6,7): warning C4250: 'DLSSDFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(48,10):
+             see declaration of 'IFeature_Dx11::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx11.h(10,7): warning C4250: 'FSR2FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(47,27):
+             see declaration of 'IFeature_Dx11::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx11.h(10,7): warning C4250: 'FSR2FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(48,10):
+             see declaration of 'IFeature_Dx11::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr31\FSR31Feature_Dx11.h(10,7): warning C4250: 'FSR31FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(47,27):
+             see declaration of 'IFeature_Dx11::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr31\FSR31Feature_Dx11.h(10,7): warning C4250: 'FSR31FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(48,10):
+             see declaration of 'IFeature_Dx11::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx12.h(7,7): warning C4250: 'DLSSDFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx12.h(7,7): warning C4250: 'DLSSDFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         FSR2Feature_212.cpp
+         FSR2Feature_Dx11On12_212.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/FeatureProvider_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         FSR2Feature_Dx12_212.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2_212/FSR2Feature_Dx11On12_212.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2_212/FSR2Feature_Dx11On12_212.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         FSR2Feature_Vk_212.cpp
+         FFXFeature.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2_212/FSR2Feature_Dx12_212.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2_212/FSR2Feature_Dx12_212.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         FSR31Feature_Dx11.cpp
+         FFXFeature_Dx11On12.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr31\FSR31Feature_Dx11.h(10,7): warning C4250: 'FSR31FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr31/FSR31Feature_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(47,27):
+             see declaration of 'IFeature_Dx11::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr31\FSR31Feature_Dx11.h(10,7): warning C4250: 'FSR31FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr31/FSR31Feature_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(48,10):
+             see declaration of 'IFeature_Dx11::ReadDetailedGpuTimes'
+         
+         FFXFeature_Dx12.cpp
+         FFXFeature_Vk.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/ffx/FFXFeature_Dx11On12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/ffx/FFXFeature_Dx11On12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         IFeature_Dx11.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/ffx/FFXFeature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/ffx/FFXFeature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         IFeature_Dx11wDx12.cpp
+         Config.cpp
+         FSR2Feature.cpp
+         FSR2Feature_Dx11.cpp
+         FSR2Feature_Dx11On12.cpp
+         FSR2Feature_Dx12.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx11.h(10,7): warning C4250: 'FSR2FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2/FSR2Feature_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(47,27):
+             see declaration of 'IFeature_Dx11::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx11.h(10,7): warning C4250: 'FSR2FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2/FSR2Feature_Dx11.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx11.h(48,10):
+             see declaration of 'IFeature_Dx11::ReadDetailedGpuTimes'
+         
+         FSR2Feature_Vk.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2/FSR2Feature_Dx11On12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2/FSR2Feature_Dx11On12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         IFeature.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2/FSR2Feature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/fsr2/FSR2Feature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         IFeature_Dx12.cpp
+         FfxApi_Dx12.cpp
+         FSR2_Dx12.cpp
+         FSR3_Dx12.cpp
+         D3D11_Hooks.cpp
+         Vulkan_Hooks.cpp
+         menu_common.cpp
+         menu_dx_base.cpp
+         menu_dx11.cpp
+         menu_dx12.cpp
+         menu_overlay_base.cpp
+         menu_overlay_dx.cpp
+         menu_overlay_vk.cpp
+         wrapped_swapchain.cpp
+         Logger.cpp
+         NVNGX.cpp
+         NVNGX_DLSS_Dx11.cpp
+         DlssNr_Dx12.cpp
+         DlssNr_Vk.cpp
+         DlssNrFeature_Vk.cpp
+         DlssNrFinished_Vk.cpp
+         DlssNr_ExposureScan.cpp
+         DlssNr_Proxy.cpp
+         DlssNr_Menu.cpp
+         NVNGX_DLSS_Dx12.cpp
+         dllmain.cpp
+         NVNGX_DLSS_Vk.cpp
+         XeSSFeature.cpp
+         XeSSFeature_Dx11.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/inputs/NVNGX_DLSS_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/inputs/NVNGX_DLSS_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         XeSSFeature_Dx11on12.cpp
+         XeSSFeature_Dx12.cpp
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/xess/XeSSFeature_Dx11on12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/xess/XeSSFeature_Dx11on12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/xess/XeSSFeature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(42,27):
+             see declaration of 'IFeature_Dx12::ReadUpscalerTime'
+         
+     2>D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         (compiling source file '/upscalers/xess/XeSSFeature_Dx12.cpp')
+             D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\IFeature_Dx12.h(43,10):
+             see declaration of 'IFeature_Dx12::ReadDetailedGpuTimes'
+         
+         scanner.cpp
+         Bias_Dx11.cpp
+         Bias_Dx12.cpp
+         FT_Dx12.cpp
+         OS_Dx11.cpp
+         OS_Dx12.cpp
+         RCAS_Dx11.cpp
+         RCAS_Dx12.cpp
+         XeSSFeature_Vk.cpp
+         Util.cpp
+         version_check.cpp
+         XeSS_Debug.cpp
+         XeSS_Dx12.cpp
+         DlssNr_Status.cpp
+         DlssNr_GpuLifetime.cpp
+         DlssNr_MenuBlend.cpp
+         DlssNr_MenuInput.cpp
+         DlssNr_MenuModel.cpp
+         DlssNr_MenuOverlay.cpp
+         DlssNr_MenuPlacement.cpp
+         DlssNr_Pipeline_Dx12.cpp
+         DlssNrFeature_Vk_Model.cpp
+         DlssNrFeature_Vk_Resources.cpp
+         DlssNr_Upscaler_Dx12.cpp
+         DlssNr_ExposureAnchors.cpp
+         DlssNr_ExposureReadback.cpp
+         DlssNr_Dx12_DeferredSr.cpp
+         DlssNr_Dx12_Enlarge.cpp
+         DlssNr_Dx12_Evaluate.cpp
+         DlssNr_Dx12_Exposure.cpp
+         DlssNr_Dx12_FinishedCompose.cpp
+         DlssNr_Dx12_FinishedQueue.cpp
+         DlssNr_Dx12_Hold.cpp
+         DlssNr_Dx12_Late.cpp
+         DlssNr_Dx12_Resources.cpp
+         DlssNr_Dx12_Run.cpp
+         DlssNr_Dx12_Status.cpp
+         DlssNr_Dx12_Encode.cpp
+         DlssNr_Dx12_Models.cpp
+         DlssNr_StreamlinePicture.cpp
+         C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX86\x64\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /MP /O2 /Ot /GL /D NDEBUG /D _DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR /D _WINDOWS /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:fast /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++latest /permissive- /Fo"x64\Release\\" /Fd"x64\Release\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:queue /w34996 include\imgui\imgui_impl_dx11.cpp include\imgui\imgui_impl_dx12.cpp include\imgui\imgui_impl_uwp.cpp include\imgui\imgui_impl_vulkan.cpp include\imgui\imgui_impl_win32.cpp include\sl.param\parameters.cpp include\imgui\imgui.cpp include\imgui\imgui_draw.cpp include\imgui\imgui_tables.cpp include\imgui\imgui_widgets.cpp include\imgui\misc\freetype\imgui_freetype.cpp
+         imgui_impl_dx11.cpp
+         imgui_impl_dx12.cpp
+         imgui_impl_uwp.cpp
+         imgui_impl_vulkan.cpp
+         imgui_impl_win32.cpp
+         parameters.cpp
+         imgui.cpp
+         imgui_draw.cpp
+         imgui_tables.cpp
+         imgui_widgets.cpp
+         imgui_freetype.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"x64\Release\OptiScaler.res" OptiScaler.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX86\x64\link.exe /ERRORREPORT:QUEUE /OUT:"D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\x64\Release\OptiScaler.dll" /NOLOGO winhttp.lib WindowsApp.lib Dbghelp.lib dxgi.lib d3d11.lib d3d12.lib "vulkan-1.lib" dxguid.lib freetype.lib ffx_fsr2_api_x64.lib ffx_fsr2_api_dx11_x64.lib ffx_fsr2_api_dx12_x64.lib ffx_fsr2_api_vk_x64.lib ffx_fsr2_212_api_dx12_x64.lib ffx_fsr2_212_api_vk_x64.lib ffx_fsr2_212_api_x64.lib d3dcompiler.lib ffx_backend_dx11_x64.lib ffx_fsr3_x64.lib ffx_frameinterpolation_x64.lib ffx_fsr3upscaler_x64.lib ffx_opticalflow_x64.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Delayimp.lib /DEF:"Source.def" /DELAYLOAD:"vulkan-1.dll" /DELAYLOAD:dxgi.dll /DELAYLOAD:d3d12.dll /DELAYLOAD:D3DCOMPILER_47.dll /MANIFEST /MANIFESTUAC:NO /manifest:embed /PDB:"D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\x64\Release\OptiScaler.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"x64\Release\OptiScaler.iobj" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\x64\Release\OptiScaler.lib" /MACHINE:X64 /ignore:4099 /DLL x64\Release\OptiScaler.res
+         x64\Release\DlssNr_CompatibilityRuntime.obj
+         x64\Release\DlssNr_CompatibilityRuntimePaths.obj
+         x64\Release\DlssNr_CompatibilityRuntimeVk.obj
+         x64\Release\DlssNr_NgxDiagnostics.obj
+         x64\Release\Nvngx_Combo.obj
+         x64\Release\FSR4Upgrade.obj
+         x64\Release\GpuTime_Dx11.obj
+         x64\Release\GpuTime_Dx12.obj
+         x64\Release\Amdxc64_Hooks.obj
+         x64\Release\DLSSG_Dx12.obj
+         x64\Release\FSRFG_Dx12.obj
+         x64\Release\IFGFeature.obj
+         x64\Release\IFGFeature_Dx12.obj
+         x64\Release\Nvngx_FG.obj
+         x64\Release\FSR4ModelSelection.obj
+         x64\Release\D3D12_Hooks.obj
+         x64\Release\DxgiFactory_Hooks.obj
+         x64\Release\DxgiFactory_WrappedCalls.obj
+         x64\Release\Dxgi_Hooks.obj
+         x64\Release\FG_Hooks.obj
+         x64\Release\Kernel_Hooks.obj
+         x64\Release\LibraryLoad_Hooks.obj
+         x64\Release\VulkanwDx12_Hooks.obj
+         x64\Release\Xell_Hooks.obj
+         x64\Release\Streamline_Inputs_Sl1_Dx12.obj
+         x64\Release\device_info.obj
+         x64\Release\Upscaler_Inputs_Dx11wDx12.obj
+         x64\Release\input_common.obj
+         x64\Release\input_reflex.obj
+         x64\Release\input_xell.obj
+         x64\Release\input_antilag2.obj
+         x64\Release\Magnifier_Dx11.obj
+         x64\Release\input_system.obj
+         x64\Release\input_system_cursor.obj
+         x64\Release\input_system_detours.obj
+         x64\Release\input_system_directinput.obj
+         x64\Release\input_system_gameinput.obj
+         x64\Release\input_system_hid.obj
+         x64\Release\input_system_messages.obj
+         x64\Release\input_system_raw.obj
+         x64\Release\input_system_window.obj
+         x64\Release\input_system_windows_hooks.obj
+         x64\Release\input_system_xinput.obj
+         x64\Release\IdentifyGpu.obj
+         x64\Release\FSR2_Dx11.obj
+         x64\Release\FSR2_Vk.obj
+         x64\Release\XeSS_Dx11.obj
+         x64\Release\ll_util.obj
+         x64\Release\log.obj
+         x64\Release\low_latency.obj
+         x64\Release\low_latency_d3d.obj
+         x64\Release\ll_antilag2.obj
+         x64\Release\ll_antilag_vk.obj
+         x64\Release\ll_latencyflex.obj
+         x64\Release\ll_xell.obj
+         x64\Release\low_latency_vk.obj
+         x64\Release\nvapi_calls.obj
+         x64\Release\Nvngx_FFX.obj
+         x64\Release\Nvngx_Nukems.obj
+         x64\Release\Nvngx_Arturs.obj
+         x64\Release\NVNGX_Parameter.obj
+         x64\Release\Nvngx_DllProxy.obj
+         x64\Release\OptiTypes.obj
+         x64\Release\pch.obj
+         x64\Release\DI_Dx12.obj
+         x64\Release\HCC_Dx12.obj
+         x64\Release\HudCopy_Dx12.obj
+         x64\Release\DT_Vk.obj
+         x64\Release\Magnifier_Common.obj
+         x64\Release\Magnifier_Dx12.obj
+         x64\Release\Magnifier_Vk.obj
+         x64\Release\OS_Vk.obj
+         x64\Release\RCAS_Common.obj
+         x64\Release\RCAS_Vk.obj
+         x64\Release\Shader_Common.obj
+         x64\Release\RUI_Dx12.obj
+         x64\Release\RC_Vk.obj
+         x64\Release\Shader_Dx12.obj
+         x64\Release\Shader_Vk.obj
+         x64\Release\SkipSpoof.obj
+         x64\Release\Shader_Dx11.obj
+         x64\Release\Dxgi_Spoofing.obj
+         x64\Release\User32_Spoofing.obj
+         x64\Release\Vulkan_Spoofing.obj
+         x64\Release\input_uell.obj
+         x64\Release\FSR2Feature_VkOnDx12_212.obj
+         x64\Release\FFXFeature_VkOn12.obj
+         x64\Release\FSR31Feature.obj
+         x64\Release\IFeature_Vk.obj
+         x64\Release\IFeature_VkwDx12.obj
+         x64\Release\UpscalerTime_Vk.obj
+         x64\Release\dx11_with_dx12.obj
+         x64\Release\with_dx12.obj
+         x64\Release\dx11_with_dx12_sc.obj
+         x64\Release\wrapped_factory.obj
+         x64\Release\FSR3_Dx12_FG.obj
+         x64\Release\Streamline_Inputs_Dx12.obj
+         x64\Release\XeFG_Dx12.obj
+         x64\Release\Streamline_Hooks.obj
+         x64\Release\Hudfix_Dx12.obj
+         x64\Release\imgui_impl_dx11.obj
+         x64\Release\imgui_impl_dx12.obj
+         x64\Release\imgui_impl_uwp.obj
+         x64\Release\imgui_impl_vulkan.obj
+         x64\Release\imgui_impl_win32.obj
+         x64\Release\parameters.obj
+         x64\Release\FfxApiExe_Dx12.obj
+         x64\Release\FfxApi_Dx12_FG.obj
+         x64\Release\FfxApi_Vk.obj
+         x64\Release\Upscaler_Inputs_Dx12.obj
+         x64\Release\XeSS_Base.obj
+         x64\Release\XeSS_Common.obj
+         x64\Release\XeSS_Dbg.obj
+         x64\Release\XeSS_Vulkan.obj
+         x64\Release\FrameLimit.obj
+         x64\Release\fakenvapi.obj
+         x64\Release\NvApiHooks.obj
+         x64\Release\NvApiTypes.obj
+         x64\Release\Reflex_Hooks.obj
+         x64\Release\ResTrack_dx12.obj
+         x64\Release\HC_Dx12.obj
+         x64\Release\RF_Dx12.obj
+         x64\Release\DS_Dx12.obj
+         x64\Release\DT_Dx11.obj
+         x64\Release\DLSSDFeature.obj
+         x64\Release\DLSSDFeature_Dx11.obj
+         x64\Release\DLSSDFeature_Dx12.obj
+         x64\Release\DLSSDFeature_Vk.obj
+         x64\Release\DLSSFeature.obj
+         x64\Release\DLSSFeature_Dx11.obj
+         x64\Release\DLSSFeature_Dx11On12.obj
+         x64\Release\DLSSFeature_VkOn12.obj
+         x64\Release\DLSSFeature_Dx12.obj
+         x64\Release\DLSSFeature_Vk.obj
+         x64\Release\FeatureProvider_Dx11.obj
+         x64\Release\FeatureProvider_Dx12.obj
+         x64\Release\FeatureProvider_Vk.obj
+         x64\Release\FSR2Feature_212.obj
+         x64\Release\FSR2Feature_Dx11On12_212.obj
+         x64\Release\FSR2Feature_Dx12_212.obj
+         x64\Release\FSR2Feature_Vk_212.obj
+         x64\Release\FFXFeature.obj
+         x64\Release\FSR31Feature_Dx11.obj
+         x64\Release\FFXFeature_Dx11On12.obj
+         x64\Release\FFXFeature_Dx12.obj
+         x64\Release\FFXFeature_Vk.obj
+         x64\Release\IFeature_Dx11.obj
+         x64\Release\IFeature_Dx11wDx12.obj
+         x64\Release\Config.obj
+         x64\Release\FSR2Feature.obj
+         x64\Release\FSR2Feature_Dx11.obj
+         x64\Release\FSR2Feature_Dx11On12.obj
+         x64\Release\FSR2Feature_Dx12.obj
+         x64\Release\FSR2Feature_Vk.obj
+         x64\Release\IFeature.obj
+         x64\Release\IFeature_Dx12.obj
+         x64\Release\FfxApi_Dx12.obj
+         x64\Release\FSR2_Dx12.obj
+         x64\Release\FSR3_Dx12.obj
+         x64\Release\D3D11_Hooks.obj
+         x64\Release\Vulkan_Hooks.obj
+         x64\Release\menu_common.obj
+         x64\Release\menu_dx_base.obj
+         x64\Release\menu_dx11.obj
+         x64\Release\menu_dx12.obj
+         x64\Release\menu_overlay_base.obj
+         x64\Release\menu_overlay_dx.obj
+         x64\Release\menu_overlay_vk.obj
+         x64\Release\wrapped_swapchain.obj
+         x64\Release\imgui.obj
+         x64\Release\imgui_draw.obj
+         x64\Release\imgui_tables.obj
+         x64\Release\imgui_widgets.obj
+         x64\Release\imgui_freetype.obj
+         x64\Release\Logger.obj
+         x64\Release\NVNGX.obj
+         x64\Release\NVNGX_DLSS_Dx11.obj
+         x64\Release\DlssNr_Dx12.obj
+         x64\Release\DlssNr_Vk.obj
+         x64\Release\DlssNrFeature_Vk.obj
+         x64\Release\DlssNrFinished_Vk.obj
+         x64\Release\DlssNr_ExposureScan.obj
+         x64\Release\DlssNr_Proxy.obj
+         x64\Release\DlssNr_Menu.obj
+         x64\Release\NVNGX_DLSS_Dx12.obj
+         x64\Release\dllmain.obj
+         x64\Release\NVNGX_DLSS_Vk.obj
+         x64\Release\XeSSFeature.obj
+         x64\Release\XeSSFeature_Dx11.obj
+         x64\Release\XeSSFeature_Dx11on12.obj
+         x64\Release\XeSSFeature_Dx12.obj
+         x64\Release\scanner.obj
+         x64\Release\Bias_Dx11.obj
+         x64\Release\Bias_Dx12.obj
+         x64\Release\FT_Dx12.obj
+         x64\Release\OS_Dx11.obj
+         x64\Release\OS_Dx12.obj
+         x64\Release\RCAS_Dx11.obj
+         x64\Release\RCAS_Dx12.obj
+         x64\Release\XeSSFeature_Vk.obj
+         x64\Release\Util.obj
+         x64\Release\version_check.obj
+         x64\Release\XeSS_Debug.obj
+         x64\Release\XeSS_Dx12.obj
+         x64\Release\DlssNr_Status.obj
+         x64\Release\DlssNr_GpuLifetime.obj
+         x64\Release\DlssNr_MenuBlend.obj
+         x64\Release\DlssNr_MenuInput.obj
+         x64\Release\DlssNr_MenuModel.obj
+         x64\Release\DlssNr_MenuOverlay.obj
+         x64\Release\DlssNr_MenuPlacement.obj
+         x64\Release\DlssNr_Pipeline_Dx12.obj
+         x64\Release\DlssNrFeature_Vk_Model.obj
+         x64\Release\DlssNrFeature_Vk_Resources.obj
+         x64\Release\DlssNr_Upscaler_Dx12.obj
+         x64\Release\DlssNr_ExposureAnchors.obj
+         x64\Release\DlssNr_ExposureReadback.obj
+         x64\Release\DlssNr_Dx12_DeferredSr.obj
+         x64\Release\DlssNr_Dx12_Enlarge.obj
+         x64\Release\DlssNr_Dx12_Evaluate.obj
+         x64\Release\DlssNr_Dx12_Exposure.obj
+         x64\Release\DlssNr_Dx12_FinishedCompose.obj
+         x64\Release\DlssNr_Dx12_FinishedQueue.obj
+         x64\Release\DlssNr_Dx12_Hold.obj
+         x64\Release\DlssNr_Dx12_Late.obj
+         x64\Release\DlssNr_Dx12_Resources.obj
+         x64\Release\DlssNr_Dx12_Run.obj
+         x64\Release\DlssNr_Dx12_Status.obj
+         x64\Release\DlssNr_Dx12_Encode.obj
+         x64\Release\DlssNr_Dx12_Models.obj
+         x64\Release\DlssNr_StreamlinePicture.obj
+     2>LINK : warning C4744: 'static struct std::atomic<class std::shared_ptr<class LowLatencyTech> > InputCommon::currently_active_tech' has different type in 'd:\a\optiscaler-bloodbornecomp\optiscaler-bloodbornecomp\optiscaler\nvapi\fakenvapi\low_latency_d3d.cpp' and 'd:\a\optiscaler-bloodbornecomp\optiscaler-bloodbornecomp\optiscaler\hooks\amdxc64_hooks.cpp': '__declspec(align(16)) struct (16 bytes)' and 'struct (16 bytes)' [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+            Creating library D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\x64\Release\OptiScaler.lib and object D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\x64\Release\OptiScaler.exp
+     2>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         Generating code
+         Previous IPDB not found, fall back to full compilation.
+         All 41913 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         Finished generating code
+         OptiScaler.vcxproj -> D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\x64\Release\OptiScaler.dll
+       FinalizeBuildStatus:
+         Deleting file "x64\Release\OptiScaler.tlog\unsuccessfulbuild".
+         Touching "x64\Release\OptiScaler.tlog\OptiScaler.lastbuildstate".
+     2>Done Building Project "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj" (default targets).
+     1>Done Building Project "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler.sln" (default targets).
+
+Build succeeded.
+
+       "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler.sln" (default target) (1) ->
+       "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj" (default target) (2) ->
+       (ClCompile target) -> 
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\shaders\magnifier\Magnifier_Common.cpp(40,51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\shaders\magnifier\Magnifier_Common.cpp(41,51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.44.35207\include\optional(82,17): warning C4244: 'initializing': conversion from 'int64_t' to 'unsigned int', possible loss of data [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\hooks\Streamline_Hooks.cpp(250,63): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx11.h(6,7): warning C4250: 'DLSSDFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx11.h(6,7): warning C4250: 'DLSSDFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx12.h(7,7): warning C4250: 'DLSSDFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx12.h(7,7): warning C4250: 'DLSSDFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx11.h(6,7): warning C4250: 'DLSSFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx11.h(6,7): warning C4250: 'DLSSFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx11.h(6,7): warning C4250: 'DLSSFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx11.h(6,7): warning C4250: 'DLSSFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx11.h(6,7): warning C4250: 'DLSSDFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx11.h(6,7): warning C4250: 'DLSSDFeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx11.h(10,7): warning C4250: 'FSR2FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx11.h(10,7): warning C4250: 'FSR2FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr31\FSR31Feature_Dx11.h(10,7): warning C4250: 'FSR31FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr31\FSR31Feature_Dx11.h(10,7): warning C4250: 'FSR31FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx12.h(7,7): warning C4250: 'DLSSDFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlssd\DLSSDFeature_Dx12.h(7,7): warning C4250: 'DLSSDFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2_212\FSR2Feature_Dx12_212.h(8,7): warning C4250: 'FSR2FeatureDx12_212': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr31\FSR31Feature_Dx11.h(10,7): warning C4250: 'FSR31FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr31\FSR31Feature_Dx11.h(10,7): warning C4250: 'FSR31FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\ffx\FFXFeature_Dx12.h(8,7): warning C4250: 'FFXFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx11.h(10,7): warning C4250: 'FSR2FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx11.h(10,7): warning C4250: 'FSR2FeatureDx11': inherits 'IFeature_Dx11::IFeature_Dx11::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\fsr2\FSR2Feature_Dx12.h(8,7): warning C4250: 'FSR2FeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\dlss\DLSSFeature_Dx12.h(7,7): warning C4250: 'DLSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadUpscalerTime' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\upscalers\xess\XeSSFeature_Dx12.h(6,7): warning C4250: 'XeSSFeatureDx12': inherits 'IFeature_Dx12::IFeature_Dx12::ReadDetailedGpuTimes' via dominance [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+
+
+       "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler.sln" (default target) (1) ->
+       "D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj" (default target) (2) ->
+       (Link target) -> 
+         LINK : warning C4744: 'static struct std::atomic<class std::shared_ptr<class LowLatencyTech> > InputCommon::currently_active_tech' has different type in 'd:\a\optiscaler-bloodbornecomp\optiscaler-bloodbornecomp\optiscaler\nvapi\fakenvapi\low_latency_d3d.cpp' and 'd:\a\optiscaler-bloodbornecomp\optiscaler-bloodbornecomp\optiscaler\hooks\amdxc64_hooks.cpp': '__declspec(align(16)) struct (16 bytes)' and 'struct (16 bytes)' [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+         LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library [D:\a\OptiScaler-BloodborneComp\OptiScaler-BloodborneComp\OptiScaler\OptiScaler.vcxproj]
+
+    64 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:02:49.42
