@@ -1,0 +1,6 @@
+sha=336444a10e61bbbed53f43db750dd6a1881c574b
+ref=bloodborne-vk-direct
+run=https://github.com/Bonk-Bomb/OptiScaler-BloodborneComp/actions/runs/38147936258
+build=success
+package=success
+version=bloodborne-vk-direct-336444a1
