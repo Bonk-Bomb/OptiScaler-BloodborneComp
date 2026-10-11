@@ -6,8 +6,10 @@
 #include <shaders/dlssnr/DlssNr_Guides.h>
 #include <shaders/dlssnr/DlssNr_Spatial.h>
 #include "PassProfiles.h"
+#include "DlssNr_CompatibilityRuntimeVk.h"
 #include <nvsdk_ngx_vk.h>
 #include <shaders/output_scaling/OS_Vk.h>
+#include <memory>
 #include <mutex>
 
 namespace DlssNr
@@ -19,6 +21,9 @@ struct NgxPassVk
 {
     NVSDK_NGX_Handle* feature = nullptr;
     NVSDK_NGX_Parameter* parameters = nullptr;
+    // True when the feature was created through the direct compatibility runtime rather than the driver
+    // dispatcher; release and evaluation must then go through the same runtime.
+    bool direct = false;
 };
 
 struct VkState
@@ -31,6 +36,9 @@ struct VkState
     VkDevice device = VK_NULL_HANDLE;
 
     bool ngxInitialised = false;
+    // Direct compatibility runtime (tried before the driver dispatcher on native Vulkan).
+    std::shared_ptr<CompatibilityRuntimeVk> compatibility;
+    bool compatibilityTried = false;
     NgxPassVk models[DlssNr::MaxPassCount] {};
     ModelSettings builtSettings[DlssNr::MaxPassCount] {};
     unsigned int activePasses = 0;

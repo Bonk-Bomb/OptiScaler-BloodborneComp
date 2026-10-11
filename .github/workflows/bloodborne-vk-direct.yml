@@ -1,0 +1,102 @@
+name: Bloodborne Vulkan direct NR build
+
+# Builds the native-Vulkan direct compatibility runtime branches on every push and publishes:
+#  - the full MSBuild log (and a short status file) to the orphan branch build-logs/<branch>
+#  - on success, a prerelease with the same package layout as the upstream NR releases
+on:
+  push:
+    branches:
+      - "bloodborne-vk-direct"
+      - "bloodborne-vk-direct-*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bb-vk-direct-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          submodules: true
+          fetch-depth: 1
+
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build
+        id: build
+        shell: powershell
+        continue-on-error: true
+        run: |
+          New-Item -ItemType Directory -Force -Path ci-logs | Out-Null
+          msbuild OptiScaler.sln /m /p:Configuration=Release /p:Platform=x64 /p:PostBuildEventUseInBuild=false `
+            "/p:OptiScalerRtx40Mfg=false" /v:minimal `
+            "/flp1:LogFile=ci-logs\errors.log;ErrorsOnly" `
+            "/flp2:LogFile=ci-logs\warnings.log;WarningsOnly" `
+            "/flp3:LogFile=ci-logs\build.log;Verbosity=normal"
+          if ($LASTEXITCODE -ne 0) { throw "msbuild failed with exit code $LASTEXITCODE" }
+
+      - name: Package
+        id: package
+        if: steps.build.outcome == 'success'
+        shell: powershell
+        continue-on-error: true
+        run: |
+          $short = "${{ github.sha }}".Substring(0, 8)
+          $branch = "${{ github.ref_name }}" -replace '[^A-Za-z0-9._-]', '-'
+          $version = "$branch-$short"
+          ./package_release.ps1 -Version $version -SkipBuild *>&1 | Tee-Object -FilePath ci-logs\package.log
+          if (-not (Test-Path "release/OptiScaler-NR-$version.zip")) { throw 'Package was not created.' }
+          Copy-Item x64/Release/OptiScaler.dll "release/OptiScaler.dll"
+          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+
+      - name: Publish prerelease
+        if: steps.package.outcome == 'success'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          v="${{ steps.package.outputs.version }}"
+          gh release create "$v" "release/OptiScaler-NR-$v.zip" release/OptiScaler.dll \
+            --repo "${{ github.repository }}" --target "${{ github.sha }}" --prerelease \
+            --title "$v" --notes "Automated build of ${{ github.ref_name }} at ${{ github.sha }}."
+
+      - name: Publish logs
+        if: always()
+        shell: bash
+        env:
+          BUILD: ${{ steps.build.outcome }}
+          PACKAGE: ${{ steps.package.outcome }}
+        run: |
+          mkdir -p ci-logs
+          {
+            echo "sha=${{ github.sha }}"
+            echo "ref=${{ github.ref_name }}"
+            echo "run=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo "build=$BUILD"
+            echo "package=$PACKAGE"
+            echo "version=${{ steps.package.outputs.version }}"
+          } > ci-logs/status.txt
+          logbranch="build-logs/${{ github.ref_name }}"
+          work="$RUNNER_TEMP/logs"
+          rm -rf "$work" && mkdir -p "$work" && cp -r ci-logs/. "$work/"
+          cd "$work"
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q -b "$logbranch"
+          git add -A
+          git commit -q -m "Build logs for ${{ github.sha }} ($BUILD/$PACKAGE)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "HEAD:refs/heads/$logbranch"
+
+      - name: Fail the job when the build failed
+        if: steps.build.outcome != 'success' || steps.package.outcome != 'success'
+        shell: bash
+        run: exit 1

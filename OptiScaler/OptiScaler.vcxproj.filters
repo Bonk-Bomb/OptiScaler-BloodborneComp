@@ -1699,6 +1699,8 @@
     <ClCompile Include="dlssnr\DlssNr_CompatibilityRuntime.cpp"><Filter>Source Files</Filter></ClCompile>
     <ClCompile Include="dlssnr\DlssNr_CompatibilityRuntimePaths.cpp"><Filter>Source Files</Filter></ClCompile>
     <ClInclude Include="dlssnr\DlssNr_CompatibilityRuntime.h"><Filter>Header Files</Filter></ClInclude>
+    <ClCompile Include="dlssnr\DlssNr_CompatibilityRuntimeVk.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClInclude Include="dlssnr\DlssNr_CompatibilityRuntimeVk.h"><Filter>Header Files</Filter></ClInclude>
     <ClInclude Include="dlssnr\DlssNr_RuntimeImports.h"><Filter>Header Files</Filter></ClInclude>
   </ItemGroup>
   <ItemGroup>
