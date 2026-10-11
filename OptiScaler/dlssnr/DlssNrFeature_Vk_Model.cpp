@@ -60,7 +60,9 @@ void ModelVk::Impl::ReleaseModels()
     // GPU work is retired by callers before feature/map teardown.
     for (auto& model : state.models)
     {
-        if (model.feature && NVNGXProxy::VULKAN_ReleaseFeature())
+        if (model.feature && model.direct && state.compatibility)
+            state.compatibility->Release(model.feature);
+        else if (model.feature && !model.direct && NVNGXProxy::VULKAN_ReleaseFeature())
             NVNGXProxy::VULKAN_ReleaseFeature()(model.feature);
         if (model.parameters && NVNGXProxy::VULKAN_DestroyParameters())
             NVNGXProxy::VULKAN_DestroyParameters()(model.parameters);
@@ -98,16 +100,46 @@ bool ModelVk::Impl::CreateModel(VkCommandBuffer commandBuffer, unsigned int pass
         }
     }
     auto* parameters = model.parameters;
-    parameters->Set("DLSSNR.Enabled", 1u);
-    parameters->Set("DLSSNR.Width", width);
-    parameters->Set("DLSSNR.Height", height);
-    parameters->Set("CreationNodeMask", 1u);
-    parameters->Set("VisibilityNodeMask", 1u);
-    parameters->Set("DLSSNR.Hint.Render.Preset", Profiles::PassPreset(config, passIndex));
-    parameters->Set("DLSSNR.UICorrection", 1u);
-    SetTuning(parameters, Profiles::PassTuning(config, passIndex), Profiles::PassStyle(config, passIndex));
-    const auto result = NVNGXProxy::VULKAN_CreateFeature1()(
-        state.device, commandBuffer, static_cast<NVSDK_NGX_Feature>(18), parameters, &model.feature);
+    auto setCreation = [&]()
+    {
+        parameters->Set("DLSSNR.Enabled", 1u);
+        parameters->Set("DLSSNR.Width", width);
+        parameters->Set("DLSSNR.Height", height);
+        parameters->Set("CreationNodeMask", 1u);
+        parameters->Set("VisibilityNodeMask", 1u);
+        parameters->Set("DLSSNR.Hint.Render.Preset", Profiles::PassPreset(config, passIndex));
+        parameters->Set("DLSSNR.UICorrection", 1u);
+        SetTuning(parameters, Profiles::PassTuning(config, passIndex), Profiles::PassStyle(config, passIndex));
+    };
+    setCreation();
+
+    NVSDK_NGX_Result result = NVSDK_NGX_Result_Fail;
+    model.direct = false;
+
+    // Direct runtime first. On RTX 20/30/40 the driver's signed loader refuses the compatibility build of
+    // nvngx_dlssnr.dll (CreateFeature(18) -> 0xBAD0000B), so on those cards the driver attempt can only fail.
+    // The 0.2.0 forwarder proved the direct route on native Vulkan games (Bloodborne on shadPS4 among them),
+    // so try it before the driver; the driver remains the fallback for RTX 50 and full NGX installs.
+    if (!state.compatibilityTried)
+    {
+        state.compatibilityTried = true;
+        state.compatibility = CompatibilityRuntimeVk::TryOpen(state.instance, state.physicalDevice, state.device);
+        if (!state.compatibility)
+            LOG_INFO("DLSS-NR Vulkan: direct compatibility runtime unavailable; using the NVIDIA NGX driver");
+    }
+    if (state.compatibility)
+    {
+        result = state.compatibility->Create(commandBuffer, parameters, &model.feature);
+        model.direct = model.feature != nullptr;
+        LOG_INFO("DLSS-NR Vulkan: direct compatibility runtime CreateFeature(18), pass {}: result=0x{:X} handle={}",
+                 passIndex + 1, static_cast<unsigned int>(result), (void*) model.feature);
+    }
+    if (!model.feature)
+    {
+        setCreation();
+        result = NVNGXProxy::VULKAN_CreateFeature1()(state.device, commandBuffer, static_cast<NVSDK_NGX_Feature>(18),
+                                                     parameters, &model.feature);
+    }
     // Identical-profile layers still require distinct temporal histories. Reject aliasing rather
     // than silently sharing a driver handle, including an AlreadyExists response with a handle.
     if (model.feature)
@@ -126,9 +158,12 @@ bool ModelVk::Impl::CreateModel(VkCommandBuffer commandBuffer, unsigned int pass
     }
     if (result != NVSDK_NGX_Result_Success || !model.feature)
     {
-        LOG_ERROR("DLSS-NR Vulkan: driver CreateFeature(18), pass {}, failed 0x{:X}", passIndex + 1,
-                  static_cast<unsigned int>(result));
-        Fail("the NVIDIA NGX driver could not create an independent Neural Rendering feature");
+        LOG_ERROR("DLSS-NR Vulkan: CreateFeature(18), pass {}, failed 0x{:X} (direct runtime {})", passIndex + 1,
+                  static_cast<unsigned int>(result), state.compatibility ? "refused it too" : "unavailable");
+        Fail(state.compatibility
+                 ? "neither the direct compatibility runtime nor the NVIDIA NGX driver could create a Neural "
+                   "Rendering feature"
+                 : "the NVIDIA NGX driver could not create an independent Neural Rendering feature");
         return false;
     }
     return true;
@@ -171,6 +206,8 @@ NVSDK_NGX_Result ModelVk::Impl::EvaluateModel(VkCommandBuffer commandBuffer, uns
     parameters->Set("DLSSNR.MVecScaleX", mvX);
     parameters->Set("DLSSNR.MVecScaleY", mvY);
     SetTuning(parameters, Profiles::PassTuning(config, passIndex), Profiles::PassStyle(config, passIndex));
+    if (model.direct && state.compatibility)
+        return state.compatibility->Evaluate(commandBuffer, model.feature, parameters);
     return NVNGXProxy::VULKAN_EvaluateFeature()(commandBuffer, model.feature, parameters, nullptr);
 }
 
@@ -198,6 +235,8 @@ void ModelVk::Impl::Shutdown()
         vkDeviceWaitIdle(state.device);
 
     ReleaseModels();
+    state.compatibility.reset();
+    state.compatibilityTried = false;
     state.activePasses = 0;
     if (state.creationReady != VK_NULL_HANDLE)
         vkDestroyEvent(state.device, state.creationReady, nullptr);
